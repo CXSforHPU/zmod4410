@@ -205,7 +205,7 @@ exit:
     return;
 }
 
-static rt_size_t zmod4410_fetch_data(struct rt_sensor_device *sensor,
+static rt_ssize_t zmod4410_fetch_data(struct rt_sensor_device *sensor,
                                      void *buf,
                                      rt_size_t len)
 {

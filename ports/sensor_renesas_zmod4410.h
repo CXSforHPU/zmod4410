@@ -11,7 +11,7 @@
 #ifndef SENSOR_RENESAS_ZMOD4410_H__
 #define SENSOR_RENESAS_ZMOD4410_H__
 
-#include "sensor.h"
+#include "rtdevice.h"
 
 int rt_hw_zmod4410_init(const char *name, struct rt_sensor_config *cfg);
 
