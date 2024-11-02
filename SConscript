@@ -3,10 +3,10 @@ from building import *
 
 objs = []
 cwd  = GetCurrentDir()
-list = os.listdir(cwd)
+ls = os.listdir(cwd)
 
-for item in list:
+for item in ls:
     if os.path.isfile(os.path.join(cwd, item, 'SConscript')):
-        objs = objs + SConscript(os.path.join(item, 'SConscript'))
+        objs = objs + SConscript(os.path.join(cwd,item, 'SConscript'))
 
 Return('objs')

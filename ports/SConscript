@@ -6,7 +6,7 @@ cwd     = GetCurrentDir()
 
 src = []
 
-src     += Glob('*.c')
+src     += []
 CPPPATH = [cwd]
 LOCAL_CCFLAGS = ''
 
@@ -16,6 +16,11 @@ elif rtconfig.PLATFORM == 'armcc':
     LOCAL_CCFLAGS += ' --c99'
 elif rtconfig.PLATFORM == 'armclang':
     LOCAL_CCFLAGS += ' -std=c99'
+
+if GetDepend('PKG_ZMOD4410_USING_SENSOR_V1'):
+    src += ["sensor_renesas_zmod4410.c"]
+
+
 
 group = DefineGroup('zmod4410', src, depend = ['PKG_USING_ZMOD4410'], CPPPATH = CPPPATH, LOCAL_CCFLAGS = LOCAL_CCFLAGS)
 
