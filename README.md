@@ -62,7 +62,7 @@ int rt_hw_zmod4410_init(const char *name, struct rt_sensor_config *cfg);
 
 #### 初始化示例
 ```c
-#include "sensor_renesas_zmod4410.h"
+#include "zmod4410_sensor_v1.h"
 #define ZMOD4410_I2C_BUS "i2c1"
 int rt_hw_zmod4410_port(void)
 {
@@ -102,7 +102,7 @@ msh />sensor_polling iaq_zmod
 ```
 
 - 也可以通过 `demo.c` 中导出的测试命令 `zmod_demo` ，判断能否成功读取空气质量数据。在 demo 程序中设置了 RA6M4-CPK 开发板的 `USER INPUT` 按钮为退出键。运行效果如下：
-> 注意：`demo.c` 和 `sensor_renesas_zmod4410.c` 只能有一个被添加到工程中参与编译。
+> 注意：`demo.c` 和 `zmod4410_sensor_v1.c` 只能有一个被添加到工程中参与编译。
 
 
 ```shell

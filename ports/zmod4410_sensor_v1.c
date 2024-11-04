@@ -11,7 +11,7 @@
 #include <stdint.h>
 #include <stdlib.h>
 
-#include "sensor_renesas_zmod4410.h"
+#include "zmod4410_sensor_v1.h"
 #include "zmod4410_config_iaq2.h"
 #include "zmod4xxx.h"
 #include "zmod4xxx_hal.h"
