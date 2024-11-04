@@ -4,9 +4,11 @@ import rtconfig
 
 cwd     = GetCurrentDir()
 
-src = [cwd + '/zmod4xxx.c']
+src = [cwd + '/zmod4xxx.c',cwd + "/demo.c"]
 CPPPATH = [cwd]
 LOCAL_CCFLAGS = ''
+if GetDepend('PKG_ZMOD4410_USING_SENSOR_V1'):
+     src.remove(cwd + "/demo.c")
 
 group = DefineGroup('zmod4410', src, depend = ['PKG_USING_ZMOD4410'], CPPPATH = CPPPATH, LOCAL_CCFLAGS = LOCAL_CCFLAGS)
 
